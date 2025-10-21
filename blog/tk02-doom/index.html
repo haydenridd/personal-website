@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head id="head">
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1">
+		<title>Hayden Riddiford</title>
+		<link type="text/css" rel="stylesheet" href="/style.css">
+		<link type="text/css" rel="stylesheet" href="/highlight.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+		
+	<style>
+		#prev-next {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			margin-top: 40px;
+		}
+		
+		figure {
+			align-self: center;
+			text-align: center;
+			font-style: italic;
+		}
+		
+		.post {
+			display:flex;
+			flex-direction: column;
+		}
+	</style>
+
+	</head>
+	<body id="body">
+		
+
+	<div style="display:flex; justify-content:center; align-items: center; gap: 0.5em;">
+		<h3>Hayden Riddiford</h3>
+		<span class="dot-circle" aria-hidden="true"></span>
+		<a href="https://github.com/haydenridd/">
+			<div>
+				<img src="/github-mark.svg" class="icon-image-link">
+			</div>
+		</a>
+		<span class="dot-circle" aria-hidden="true"></span>
+		<a href="https://www.linkedin.com/in/hayden-riddiford/">
+			<div>
+				<img src="/linkedin.svg" class="icon-image-link">
+			</div>
+		</a>
+		<span class="dot-circle" aria-hidden="true"></span>
+		<a href="https://registry.jsonresume.org/haydenridd">
+			Resume
+		</a>
+	</div>
+
+	<nav>
+		<a href="/">&#8617; Back Home</a>
+	</nav>
+	<h1>Porting DOOM to the TK-02</h1>
+	<div class="post"><h2>DOOM: The Gold Standard of Contrived Engineering Challenges</h2><p>For those who may not be familiar, a very <em>specific</em> engineering sub-culture has formed over the last 30 years concerned with getting Id Software’s 1993 video game “DOOM” running on essentially anything with electricity. Some of the more notable items that can run DOOM are <a href="https://www.popularmechanics.com/science/a33957256/this-programmer-figured-out-how-to-play-doom-on-a-pregnancy-test/" target="_blank">a pregnancy test</a>, <a href="https://www.youtube.com/watch?v=bEXefdbQDjw&t=792s" target="_blank">rat neurons</a>, and <a href="https://www.youtube.com/watch?v=KFDlVgBMomQ" target="_blank">a TI-84 calculator powered by a pile of rotting potatoes</a>. This phenomenon is in part due to a love for the game, as well as the incredibly basic performance requirements to run it. Because the full source code to the game was released in 1997 by its creator John Carmack, anyone can take a crack at modifying it to fit their specific system’s constraints. Being a huge fan of these projects but fresh out of spare potatoes, I turned my gaze to the TK-02 on my desk as a potential next sacrifice to the DOOM gods.</p><h2>Doom Port Nepotism</h2><p>Now, I must admit, being the firmware engineer for this machine already gives me a <em>massive</em> leg up on the usual boutique DOOM ports. Generally, the first step in porting DOOM to [Insert Impossibly Ridiculous Platform Here] is actually breaking into said device so that custom firmware can be flashed on it. As my <em>job</em> is flashing firmware to the TK-02, no hacking is required!</p><h2>The Trenches (Rip and Tear)</h2><p>For those who just want to see DOOM running on the coffee machine, scroll to the bottom. However, for those not afraid of terms like “memory arenas”, “framebuffers”, and “file systems” this section is for you. I mentioned earlier that the full source code to the game was released for free. That’s a little bit misleading. To be more accurate, the full source code for the game <em>engine</em> was released. <a href="https://doomwiki.org/wiki/WAD" target="_blank">.WAD</a> files containing the actual data for a particular DOOM game (for instance the free <a href="https://doomwiki.org/wiki/DOOM1.WAD" target="_blank">shareware version</a>) are required and read by the game engine to actually play anything. The term “source port”, refers to a modified version of this original engine code updated to bring new features that weren’t available in the original game’s release (like running in a resolution that isn’t 320x200). At an extremely high level, successfully porting DOOM involves accomplishing the following:</p><ul><li>Selecting your source port of choice (or building your own!)</li><li>Providing a way for the game engine to send frames to your display</li><li>Providing a way to send inputs to the game (move, fire, etc.)</li><li>Providing a file system for saving/loading games</li><li>Providing a way to load .WAD files</li><li>Providing a way for the engine to allocate memory for assets loaded from the .WAD file</li><li>Providing a way to output sound if your hardware supports it</li></ul><p>While I’m unfortunately not allowed to divulge the exact processor/components/etc. our system uses, I can give some general information about the specific challenges the TK-02 has in relation to these porting requirements. We are using a “bare metal” ARM Cortex-M based ST Micro 32 bit MCU to control our system, meaning we do NOT have an OS to provide things like a file system, display drivers, etc. We have a variety of RAM and FLASH memory spread out across the processor itself and external ICs that were <em>fully</em> utilized in order to get this thing running.</p><h3>The Source Port</h3><p>I ended up using the <a href="https://github.com/ozkl/doomgeneric" target="_blank">doomgeneric</a> project as my source port, as it assumes the <em>least</em> about what you have available on your system. The biggest two things this project abstracts away is display, and input, which we’ll cover first.</p><h3>Display</h3><p>When a frame is ready in <code>doomgeneric</code>, you are presented with that data, and it’s up to you to provide your own implementation that draws said frame to your screen. In my case, this involved  copying frame data + doing some interesting aspect ratio adjustment so that it fit properly on the screen where I intended it to. I set aside the top portion of the screen to hold the game screen, so that the bottom portion could be used for touch controls. Which brings us to…</p><h3>Input</h3><p><code>doomgeneric</code> constantly looks for input, however it’s up to you to provide that input. Enter the TK-02’s touchscreen! This was fairly straightforward, different ranges of touch coordinates are mapped to various inputs the game can receive. Since real-estate is limited, only the absolutely necessary inputs are used. To squeeze even a little more room in, I landed on just touching the actual game screen to “fire”.</p><h3>File System</h3><p>This was one of the more interesting things to implement. I ended up using <a href="https://github.com/littlefs-project/littlefs" target="_blank">LittleFS</a> to create a teeny file system on external flash memory. Saving and loading games is fully supported, albeit slooooooooooooow.</p><h3>Loading .WAD Files</h3><p>This was one of the trickiest early roadblocks in the port. The external flash memory I use for Save/Load games is far too slow to support the whopping 4MB (yes that’s large in my world) .WAD file for the free shareware version of DOOM (confusingly referred to as doom1.wad, as that’s the file’s name). With the help of some linker script magic, I ended up just embedding the entire .WAD file as a binary data blob in the firmware itself. Then, after some hacking up of <code>doomgeneric</code> code, the engine now reads in this .WAD file from a fixed memory location on boot. In a port involving an actual OS, you would usually let users pass in a .WAD file of choice on the command line. Given we don’t have an OS or a command line, the .WAD file being used is permanently set for all of time.</p><h3>Memory Allocation</h3><p>For fascinating/boring reasons depending on who you are that I won’t get into, DOOM uses a “memory arena” approach to allocating memory for game assets. Generally speaking, nothing strikes more fear into the hearts of firmware engineers than the phrase “dynamic memory allocation”.  This was by far the hardest part of the port. Using a fantastic open source library I found <a href="https://github.com/rhempel/umm_malloc" target="_blank">Umm Malloc</a> , I was able to create a large enough memory pool for DOOM to use spread out across internal MCU RAM in addition to an external SDRAM IC.</p><h3>Sound</h3><p>Sadly, there are no speakers on the TK-02. <a href="https://www.youtube.com/watch?v=NDK-25IlP10" target="_blank">This</a> is recommended background music while playing to get the full experience.</p><h2>Welcome to Hell</h2><p>As you will see below, the port ended up running far better than I ever could have imagined. Some custom control graphics from our creative team really tied the entire experience together, and the game runs without any noticeable lag. And while it takes some getting used to, the touchscreen controls ended up being reasonable to use. That being said, any kind of difficulty setting is all but impossible for anyone but the most experienced DOOM veterans. Some other minor hacks to the engine disable the ability to quit the game (as there’s nothing to go back to), so TK-02: Doom Edition will play DOOM from the time it’s powered on until the heat death of the universe.</p><p><figure><img src="/blog/tk02-doom/doom_playing.gif">
+<figcaption>Gameplay</figcaption></figure></p><h2>Frequently Asked Questions</h2><h4>Why?</h4><p>Because once I realized it was possible I couldn’t rest until I saw the DOOM slayer on the TK-02. And on a more serious note because it was an extremely challenging and fun process overcoming all the system limitations to get it running.</p><h4>Will I ever get this on my TK-02?</h4><p>Sadly… No. This was a silly project I tackled in my free time that pushes our system to its absolute limits. There isn’t any room for the “normal” firmware that brews coffee (the machine’s <em>actual</em> purpose, I keep reminding myself) so the machine can either play DOOM <em>or</em> brew coffee, but not both.</p><h4>Can you publish the source code for this port?</h4><p>At this time, sadly no. In the future? Hopefully. If you’re interested in bare metal ports of DOOM in general, however, I would highly recommend checking out some of the following projects:</p><ul><li><a href="https://hackaday.io/project/181224-doom-on-an-nrf52840-based-usb-bluetooth-dongle/details" target="_blank">Doom on Nordic nRF5340</a></li><li><a href="https://github.com/kilograham/rp2040-doom" target="_blank">Doom on Raspberry Pi Pico</a></li><li><a href="https://github.com/floppes/stm32doom" target="_blank">Doom on STM32 Discovery Board</a></li></ul></div>
+	<div id="photo-gallery">
+		
+
+	</div>
+	<div id="prev-next">
+		<div>
+			<a href="/blog/corkthulu/">
+				←
+				<span>Corkthulu</span>
+			</a>
+		</div>
+		<div>
+			<a href="/memfault-article/">
+				<span>Debugging Ill-Defined Problems (Memfault Interrupt Article)</span>
+				→
+			</a>
+		</div>
+	</div>
+
+		<footer>
+		</footer>
+	</body>
+</html>
