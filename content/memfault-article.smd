@@ -1,0 +1,21 @@
+---
+.title = "Debugging Ill-Defined Problems (Memfault Interrupt Article)",
+.date = @date("2025-04-18T00:00:00"),
+.author = "Hayden Riddiford",
+.layout = "default-post.shtml",
+.draft = false,
+--- 
+
+Cross posting an article I wrote for Memfault's Interrupt Blog that can be found
+[here](https://interrupt.memfault.com/blog/debugging-steps). I also did a live stream with
+one of Memfault's founders Tyler, which is below:
+
+```=html
+<iframe width="560" height="315" 
+        src="https://www.youtube.com/embed/bgx4p-Voqkg" 
+        title="Memfault Livestream" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen>
+</iframe>
+```
