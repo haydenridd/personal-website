@@ -3,14 +3,16 @@ name: github pages
 on:
   push:
     branches:
-      - main  # Set a branch to deploy
+      - main
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # Change if you need git info
+          fetch-depth: 0
 
       - name: Setup Zine
         uses: kristoff-it/setup-zine@v1
