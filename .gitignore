@@ -5,3 +5,5 @@ zig-cache/
 zig-out/
 .vscode
 zine
+zine_*
+public

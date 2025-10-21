@@ -1,9 +1,9 @@
 Site {
     .title = "Hayden Riddiford",
-    .host_url = "https://haydenridd.github.io",
-    .url_path_prefix = "personal-website",
+    .host_url = "https://www.haydenriddiford.com",
+    .url_path_prefix = "",
     .content_dir_path = "content",
     .layouts_dir_path = "layouts",
     .assets_dir_path = "assets",
-    .static_assets = [],
+    .static_assets = ["CNAME"],
 }
