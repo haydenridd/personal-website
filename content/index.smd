@@ -1,0 +1,16 @@
+---
+.title = "Hayden Riddiford",
+.date = @date("2025-10-21T00:00:00"),
+.author = "Hayden Riddiford",
+.layout = "index.shtml",
+.draft = false,
+--- 
+
+Hello, I'm Hayden! I'm a firmware and electrical engineer by trade and a hobbyist in my free time.
+I currently reside in Seattle, Washington where I work as Lead Firmware Engineer at Terra Kaffe. Recently I've been
+contributing to the [Zig Programming Language](https://ziglang.org/) and am part of the
+[Zig Embedded Group](https://github.com/ZigEmbeddedGroup). Come check out what I've been up to on Github,
+or take a look at my blog below!
+
+This website was created using [Zine](https://zine-ssg.io/), a free open-source static site generator written in Zig.
+

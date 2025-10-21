@@ -1,0 +1,32 @@
+<extend template="post.shtml">
+
+<div id="photo-gallery">
+	<style>
+		.image-grid {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 10px;
+			max-width: 800px;
+			margin: auto;
+		}
+		
+		.image-grid img {
+			width: 100%;
+			height: 180px;
+			object-fit: cover;
+			border-radius: 8px;
+		}
+	</style>
+	<div class="image-grid">
+		<a href="$page.asset('board_ip1.jpg').link()" target="_blank"><img src="$page.asset('board_ip1.jpg').link()" alt="Board in progress: 1"></a>
+		<a href="$page.asset('board_ip2.jpg').link()" target="_blank"><img src="$page.asset('board_ip2.jpg').link()" alt="Board in progress: 2"></a>
+		<a href="$page.asset('board_ip3.jpg').link()" target="_blank"><img src="$page.asset('board_ip3.jpg').link()" alt="Board in progress: 3"></a>
+		<a href="$page.asset('board2.jpg').link()" target="_blank"><img src="$page.asset('board2.jpg').link()" alt="Board: 2"></a>
+		<a href="$page.asset('board1.jpg').link()" target="_blank"><img src="$page.asset('board1.jpg').link()" alt="Board: 1"></a>
+		<a href="$page.asset('sheath_ip1.jpg').link()" target="_blank"><img src="$page.asset('sheath_ip1.jpg').link()" alt="Sheath in progress: 1"></a>
+		<a href="$page.asset('sheath_ip2.jpg').link()" target="_blank"><img src="$page.asset('sheath_ip2.jpg').link()" alt="Sheath in progress: 2"></a>
+		<a href="$page.asset('sheath_ip3.jpg').link()" target="_blank"><img src="$page.asset('sheath_ip3.jpg').link()" alt="Sheath in progress: 3"></a>
+		<a href="$page.asset('sheath_ip4.jpg').link()" target="_blank"><img src="$page.asset('sheath_ip4.jpg').link()" alt="Sheath in progress: 4"></a>
+		<a href="$page.asset('completed.png').link()" target="_blank"><img src="$page.asset('completed.png').link()" alt="Completed"></a>
+	</div>
+</div>

@@ -1,0 +1,34 @@
+<extend template="post.shtml">
+
+<div id="photo-gallery">
+	<style>
+		.image-grid {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 10px;
+			max-width: 800px;
+			margin: auto;
+		}
+		
+		.image-grid img {
+			width: 100%;
+			height: 180px;
+			object-fit: cover;
+			border-radius: 8px;
+		}
+	</style>
+	<div class="image-grid">
+		<a href="$page.asset('octo_ip1.jpg').link()" target="_blank"><img src="$page.asset('octo_ip1.jpg').link()" alt="Wine rack in progress: 1"></a>
+		<a href="$page.asset('octo_ip2.jpg').link()" target="_blank"><img src="$page.asset('octo_ip2.jpg').link()" alt="Wine rack in progress: 2"></a>
+		<a href="$page.asset('octo_ip3.jpg').link()" target="_blank"><img src="$page.asset('octo_ip3.jpg').link()" alt="Wine rack in progress: 3"></a>
+		<a href="$page.asset('octo1.jpg').link()" target="_blank"><img src="$page.asset('octo1.jpg').link()" alt="Wine rack: 1"></a>
+		<a href="$page.asset('octo2.jpg').link()" target="_blank"><img src="$page.asset('octo2.jpg').link()" alt="Wine rack: 2"></a>
+		<a href="$page.asset('octo3.jpg').link()" target="_blank"><img src="$page.asset('octo3.jpg').link()" alt="Wine rack: 3"></a>
+		<a href="$page.asset('octo4.jpg').link()" target="_blank"><img src="$page.asset('octo4.jpg').link()" alt="Wine rack: 4"></a>
+		<a href="$page.asset('octo5.jpg').link()" target="_blank"><img src="$page.asset('octo5.jpg').link()" alt="Wine rack: 5"></a>
+		<a href="$page.asset('octo6.jpg').link()" target="_blank"><img src="$page.asset('octo6.jpg').link()" alt="Wine rack: 6"></a>
+		<a href="$page.asset('octo7.jpg').link()" target="_blank"><img src="$page.asset('octo7.jpg').link()" alt="Wine rack: 7"></a>
+		<a href="$page.asset('octo8.jpg').link()" target="_blank"><img src="$page.asset('octo8.jpg').link()" alt="Wine rack: 8"></a>
+		<a href="$page.asset('octo9.jpg').link()" target="_blank"><img src="$page.asset('octo9.jpg').link()" alt="Wine rack: 9"></a>
+	</div>
+</div>

@@ -1,0 +1,48 @@
+---
+.title = "Corkthulu",
+.date = @date("2016-10-01T00:00:00"),
+.author = "Hayden Riddiford",
+.layout = "corkthulu.shtml",
+.draft = false,
+--- 
+
+## Inspiration
+
+My sister's birthday was coming up in a couple of months, and I'd been meaning to try out my community workshop's
+([Dallas Makerspace](https://dallasmakerspace.org/)) laser cutter for a while. I figured I would incorporate the laser
+cutter into whatever present I made for her. On lower power settings, the laser cutter turns into an automated wood
+burning tool. This lets you create extremely intricate vector art on your computer, and easily transfer it to wood.
+Since my sister's favorite animal is the octopus, I was inspired to make some sort of octopus themed present. Given it
+was her 21st birthday, a wine rack seemed appropriate.
+
+## Physical Construction
+
+To start, I found a stock image that loosely matched the idea I had in my head of an octopus wrapping itself around a
+couple of wine bottles. After I found that image, the physical design followed shortly after. For a while I tossed
+around the idea of a single piece of wood holding and supporting the wine bottles, but decided to go with the
+multi-piece approach both for practical purposes as well as more opportunities to use the laser cutter. The general
+idea was pretty simple: two panels with holes in it for wine bottles, and some support boards holding everything
+together. I decided that the support boards should be joined via thumb screws and threads rather than permanently
+affixed. While masterfully joined supports may look cleaner, this way it's easy to assemble/disassemble the wine rack
+for shipping, and the shell thumb screws ended up looking pretty darn cool.
+
+In terms of the wood-working aspect of the project, all wood used in the project is pine. After the octopus image was
+burned into two different square panels of wood, I used a band saw to round out the edges. For the wine bottle holes,
+I cut these out by hand using a scroll saw. Each support is simply a square length of wood with screw threads mounted
+in them. After engraving a panel with all the thumb screw shells, each shell was cut out using a scroll saw. Although
+somewhat tedious, cutting out the thumb screws this way made it so that each shell has a cool, scalloped edge. After
+all individual pieces were complete, they were finished with a couple coats of shellac.
+
+## Laser Engraved Art
+
+The laser cutter I was using supported bitmap (.bmp) images, where you assigned different RGB values to represent
+different laser intensities. I wanted to do a simple, single intensity wood burning, which meant any bitmap images I
+used had to be entirely black and white. All engravings on the wine rack started as stock vector art found on the
+internet. Using Paint.net, I modified them to be inputs to the software the laser cutter used. The octopus is the most
+heavily modified image. I had to adjust/redraw most of the tentacles to allow for large enough wine bottle gaps.
+Because the octopus is on both sides of the wine rack, the image had to be horizontally mirrored for the second side so
+that it lined up with the first. The top two supports feature a vector art rendering of The Great Wave off Kanagawa by
+Japanese artist Hokusai. A "sea floor" scene is found on the bottom support, and the thumbscrews are all laser burned
+with sea-shell vector art.
+
+## Photo Gallery

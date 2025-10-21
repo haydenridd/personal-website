@@ -1,0 +1,118 @@
+<extend template="post.shtml">
+
+<div id="photo-gallery">
+	<style>
+		.image-grid {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 10px;
+			max-width: 800px;
+			margin: auto;
+		}
+		
+		.image-grid img {
+			width: 100%;
+			height: 180px;
+			object-fit: cover;
+			border-radius: 8px;
+		}
+	</style>
+	<div class="image-grid">
+		<a href="$page.asset('amp_ip1.jpg').link()" target="_blank">
+			<img src="$page.asset('amp_ip1.jpg').link()" alt="Amp in progress: 1">
+		</a>
+		<a href="$page.asset('amp_ip2.jpg').link()" target="_blank">
+			<img src="$page.asset('amp_ip2.jpg').link()" alt="Amp in progress: 2">
+		</a>
+		<a href="$page.asset('amp_ip3.jpg').link()" target="_blank">
+			<img src="$page.asset('amp_ip3.jpg').link()" alt="Amp in progress: 3">
+		</a>
+		<a href="$page.asset('amp_ip4.jpg').link()" target="_blank">
+			<img src="$page.asset('amp_ip4.jpg').link()" alt="Amp in progress: 4">
+		</a>
+		<a href="$page.asset('amp_ip5.jpg').link()" target="_blank">
+			<img src="$page.asset('amp_ip5.jpg').link()" alt="Amp in progress: 5">
+		</a>
+		<a href="$page.asset('amp_ip6.jpg').link()" target="_blank">
+			<img src="$page.asset('amp_ip6.jpg').link()" alt="Amp in progress: 6">
+		</a>
+		<a href="$page.asset('amp_ip7.jpg').link()" target="_blank">
+			<img src="$page.asset('amp_ip7.jpg').link()" alt="Amp in progress: 7">
+		</a>
+		<a href="$page.asset('amp_ip8.jpg').link()" target="_blank">
+			<img src="$page.asset('amp_ip8.jpg').link()" alt="Amp in progress: 8">
+		</a>
+		<a href="$page.asset('amp_ip9.jpg').link()" target="_blank">
+			<img src="$page.asset('amp_ip9.jpg').link()" alt="Amp in progress: 9">
+		</a>
+		<a href="$page.asset('amp_cab1.jpg').link()" target="_blank">
+			<img src="$page.asset('amp_cab1.jpg').link()" alt="Amp cabinet: 1">
+		</a>
+		<a href="$page.asset('amp_cab2.jpg').link()" target="_blank">
+			<img src="$page.asset('amp_cab2.jpg').link()" alt="Amp cabinet: 2">
+		</a>
+		<a href="$page.asset('amp_cab3.jpg').link()" target="_blank">
+			<img src="$page.asset('amp_cab3.jpg').link()" alt="Amp cabinet: 3">
+		</a>
+		<a href="$page.asset('amp_cab4.jpg').link()" target="_blank">
+			<img src="$page.asset('amp_cab4.jpg').link()" alt="Amp cabinet: 4">
+		</a>
+		<a href="$page.asset('amp_cab5.jpg').link()" target="_blank">
+			<img src="$page.asset('amp_cab5.jpg').link()" alt="Amp cabinet: 5">
+		</a>
+		<a href="$page.asset('amp_cab6.jpg').link()" target="_blank">
+			<img src="$page.asset('amp_cab6.jpg').link()" alt="Amp cabinet: 6">
+		</a>
+		<a href="$page.asset('amp_cab7.jpg').link()" target="_blank">
+			<img src="$page.asset('amp_cab7.jpg').link()" alt="Amp cabinet: 7">
+		</a>
+		<a href="$page.asset('amp_cab8.jpg').link()" target="_blank">
+			<img src="$page.asset('amp_cab8.jpg').link()" alt="Amp cabinet: 8">
+		</a>
+		<a href="$page.asset('amp_cab9.jpg').link()" target="_blank">
+			<img src="$page.asset('amp_cab9.jpg').link()" alt="Amp cabinet: 9">
+		</a>
+		<a href="$page.asset('amp1.jpg').link()" target="_blank">
+			<img src="$page.asset('amp1.jpg').link()" alt="Amp: 1">
+		</a>
+		<a href="$page.asset('amp2.jpg').link()" target="_blank">
+			<img src="$page.asset('amp2.jpg').link()" alt="Amp: 2">
+		</a>
+		<a href="$page.asset('amp3.jpg').link()" target="_blank">
+			<img src="$page.asset('amp3.jpg').link()" alt="Amp: 3">
+		</a>
+		<a href="$page.asset('amp4.jpg').link()" target="_blank">
+			<img src="$page.asset('amp4.jpg').link()" alt="Amp: 4">
+		</a>
+		<a href="$page.asset('amp5.jpg').link()" target="_blank">
+			<img src="$page.asset('amp5.jpg').link()" alt="Amp: 5">
+		</a>
+		<a href="$page.asset('amp6.jpg').link()" target="_blank">
+			<img src="$page.asset('amp6.jpg').link()" alt="Amp: 6">
+		</a>
+		<a href="$page.asset('amp7.jpg').link()" target="_blank">
+			<img src="$page.asset('amp7.jpg').link()" alt="Amp: 7">
+		</a>
+		<a href="$page.asset('amp8.jpg').link()" target="_blank">
+			<img src="$page.asset('amp8.jpg').link()" alt="Amp: 8">
+		</a>
+		<a href="$page.asset('amp9.jpg').link()" target="_blank">
+			<img src="$page.asset('amp9.jpg').link()" alt="Amp: 9">
+		</a>
+		<a href="$page.asset('amp10.jpg').link()" target="_blank">
+			<img src="$page.asset('amp10.jpg').link()" alt="Amp: 10">
+		</a>
+		<a href="$page.asset('amp11.jpg').link()" target="_blank">
+			<img src="$page.asset('amp11.jpg').link()" alt="Amp: 11">
+		</a>
+		<a href="$page.asset('amp12.jpg').link()" target="_blank">
+			<img src="$page.asset('amp12.jpg').link()" alt="Amp: 12">
+		</a>
+		<a href="$page.asset('amp_schematic_image.png').link()" target="_blank">
+			<img src="$page.asset('amp_schematic_image.png').link()" alt="Amp schematic">
+		</a>
+		<a href="$page.asset('amp_layout.png').link()" target="_blank">
+			<img src="$page.asset('amp_layout.png').link()" alt="Amp layout">
+		</a>
+	</div>
+</div>

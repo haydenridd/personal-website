@@ -1,0 +1,67 @@
+<extend template="base.shtml">
+<head id="head">
+	<style>
+		#prev-next {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			margin-top: 40px;
+		}
+		
+		figure {
+			align-self: center;
+			text-align: center;
+			font-style: italic;
+		}
+		
+		.post {
+			display:flex;
+			flex-direction: column;
+		}
+	</style>
+</head>
+<body id="body">
+
+	<div style="display:flex; justify-content:center; align-items: center; gap: 0.5em;">
+		<h3>Hayden Riddiford</h3>
+		<span class="dot-circle" aria-hidden="true"></span>
+		<a href="https://github.com/haydenridd/">
+			<div>
+				<img src="$site.asset('github-mark.svg').link()" class="icon-image-link">
+			</div>
+		</a>
+		<span class="dot-circle" aria-hidden="true"></span>
+		<a href="https://www.linkedin.com/in/hayden-riddiford/">
+			<div>
+				<img src="$site.asset('linkedin.svg').link()" class="icon-image-link">
+			</div>
+		</a>
+		<span class="dot-circle" aria-hidden="true"></span>
+		<a href="https://registry.jsonresume.org/haydenridd">
+			Resume
+		</a>
+	</div>
+
+	<nav>
+		<a href="$site.page('').link()">&#8617; Back Home</a>
+	</nav>
+	<h1 :text="$page.title"></h1>
+	<div class="post" :html="$page.content()"></div>
+	<div id="photo-gallery">
+		<super>
+	</div>
+	<div id="prev-next">
+		<div :if="$page.prevPage?()">
+			<a href="$if.link()">
+				←
+				<span :text="$if.title"></span>
+			</a>
+		</div>
+		<div :if="$page.nextPage?()">
+			<a href="$if.link()">
+				<span :text="$if.title"></span>
+				→
+			</a>
+		</div>
+	</div>
+</body>
