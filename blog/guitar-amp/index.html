@@ -4,8 +4,8 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="initial-scale=1">
 		<title>Hayden Riddiford</title>
-		<link type="text/css" rel="stylesheet" href="/personal-website/style.css">
-		<link type="text/css" rel="stylesheet" href="/personal-website/highlight.css">
+		<link type="text/css" rel="stylesheet" href="/style.css">
+		<link type="text/css" rel="stylesheet" href="/highlight.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -39,13 +39,13 @@
 		<span class="dot-circle" aria-hidden="true"></span>
 		<a href="https://github.com/haydenridd/">
 			<div>
-				<img src="/personal-website/github-mark.svg" class="icon-image-link">
+				<img src="/github-mark.svg" class="icon-image-link">
 			</div>
 		</a>
 		<span class="dot-circle" aria-hidden="true"></span>
 		<a href="https://www.linkedin.com/in/hayden-riddiford/">
 			<div>
-				<img src="/personal-website/linkedin.svg" class="icon-image-link">
+				<img src="/linkedin.svg" class="icon-image-link">
 			</div>
 		</a>
 		<span class="dot-circle" aria-hidden="true"></span>
@@ -55,10 +55,10 @@
 	</div>
 
 	<nav>
-		<a href="/personal-website/">&#8617; Back Home</a>
+		<a href="/">&#8617; Back Home</a>
 	</nav>
 	<h1>Fender Blender Guitar Amplifier</h1>
-	<div class="post"><h2>Inspiration</h2><p>This amplifier was a long-time-coming project that stems from an internship I did at Fender. Most of the engineers I worked with were into building/modifying/salvaging vacuum tube guitar amplifiers. Hearing them talk about their projects convinced me that I must build my own at some point. A number of years later, armed with more money and spare time than I had in college, I finally went for it.</p><p>The amplifier circuit itself is a heavily modified version of the <a href="http://ampwares.com/schematics/deluxe_5e3.pdf" target="_blank">Fender 5E3 circuit</a>. I wanted to keep it relatively simple for my first build, and this circuit lended itself wonderfully to mods. Also, I stumbled upon <a href="https://robrobinette.com/How_The_5E3_Deluxe_Works.htm" target="_blank">this website</a>, which is a fantastic resource for general tube amplifier knowledge, assembly guides, and layout considerations. A lot of the mods I ended up adding to the circuit, as well as my general layout for the amplifier was inspired by some of the amp builds the website creator Rob Robinette did.</p><h2>Amplifier Circuit</h2><p>I modded the 5E3 circuit in the hopes of making this an extremely versatile amplifier. I wanted to see how many different tonal options I could pack into the amp without making things ridiculous (you can be the judge if I crossed the line a bit). The first modification I made was reducing the number of guitar inputs from four to one in order to free up one half of a pre-amp tube to be an optional extra gain stage. The extra gain stage allows you to crank this amp into the super fuzzy, Marshall amplifier zone. The second modification I made was a “master volume” knob right before the phase-inverter in order to get distorted, over-driven tones without going deaf or getting evicted from my apartment complex.</p><p>In the tone section, I added a “bright” switch which cuts lower frequencies a bit in order to give a tiny bit more control over sound. I also added a feedback switch that optionally feeds back a portion of the amplifier output signal to the cathode of the gain stage feeding the phase-inverter. This is a single-pole triple-throw switch that lets you either connect signal feedback, a cathode capacitor, or nothing to the cathode of the gain stage. Adding feedback through the form of direct feedback or indirect feedback via the capacitor lowers the overall gain of the amplifier, giving you more headroom for clean tones.  Doing the opposite gives you more gain, causing the amp to break up earlier and produce grittier, overdriven tones.</p><p>The final mod I installed was a bias selector switch, which allows you to switch between a “self-biasing” configuration of the power amplifier tubes, and a “fixed-bias” configuration. Fixed-bias manually sets the bias current flowing through the power tubes in the output stage, and generally provides more headroom for clean tones. Self-bias allows the bias current to fluctuate based on the operating conditions and input signal to the output stage, and leads to less headroom but a cool sounding compression affect.</p><p>Lastly, there were a couple of miscellaneous features I added into the amplifier for ease of use. First, the power transformer I used in the amplifier supports up to ~100W despite the current configuration of the amplifier using only ~30W. For an instant power/loudness upgrade, the rectifier tube can be swapped for a higher voltage level GZ34, and the power tubes can be changed for 6V6 tubes to 6L6 tubes. Second, the output transformer I used had multiple impedance output taps for different speaker types. I installed a rotary switch to change impedance in order to facilitate lots of different possible cabinets. Finally, I added a 4 ohm 100W resistor to the shorting connection of the speaker jack as a safety precaution. Bad things can happen when an output transformer, which is expecting a low (~4 ohm) speaker impedance, tries to drive very high current into a high impedance node. The way I have it setup, when there isn’t a 1/4” connector plugged into the output jack the jack shorts the output signal through a 4 ohm resistor to ground. Even if the amplifier is turned on without the speaker cabinet connected, all will be well.</p><h2>Amplifier Head Enclosure and Speaker Cabinet</h2><p>I decided to do both the amplifier head, and the speaker cabinet out of cherry wood for a steampunk-esque design. I started with a 10’ board of rough cut cherry lumber, and turned it into squared boards of the dimensions I was looking for. Both the speaker cabinet, and the amplifier head use boxes made with finger-joined cherry boards. The speaker itself is mounted on cabinet grade plywood that is attached to rails of pine. The back of the speaker cabinet is also closed off with cabinet plywood. 2/3 of the back panel is detachable so that the cabinet can be either open-backed, or sealed. The speaker cover is actually made for a car sub-woofer, but I really liked the contrast it provides with the wood aesthetic.</p><p>Due to the thickness of the wood, all the knobs, switches, and various other hardware are mounted in hollowed out sections of the front and back cherry boards. The same cabinet plywood used in the speaker cabinet is used on the top and bottom of the amplifier head to seal off the internals. Tubes, transformers, and the circuit board itself are mounted directly into this top plywood panel. An annoying surprise for me was that I had to manually ground all the switch/potentiometer casing metal as I was using an insulative wood instead of conductive metal chassis. This is done both for noise reduction and safety. The bottom panel can be removed for amplifier debug and bias measurements.</p><h2>Final Product</h2><p>All and all, the amplifier sounds great! All the different features I added worked without a hitch, and I only had to fiddle around a little with ground lines to get hum to a manageable level. Even at 30W, this amplifier is LOUD. I generally have the master volume knob around a 2 when I’m playing indoors. One minor complaint is that the master volume knob is pretty touchy. It seems to get loud extremely quickly, so it’s a little hard to find that sweet spot without trial and error. That being said, tube distortion tones sound amazing on this amplifier. My favorite configuration is self-bias turned on, feedback turned on, and turning the normal volume knob just until loud strums have some grit to them.</p><p>Another thing I discovered is that with the back panel fully closed, the cherry speaker cabinet has a pretty sharp resonance spike at the lowest A on a standard guitar. You can feel the entire cabinet vibrate when you hold an A. This is somewhat expected as normal speaker cabinets are made with an acoustically “dead” material such as MDF, and filled with sound reflection deadening fluff on the inside. These measures prevent exactly what is described above. However, putting my speaker cabinet in the open-back configuration removes this resonance, and overall sounds better. I might experiment with putting some deadening material inside the cabinet in the future, but for now I’m perfectly happy with it.</p><p>This project took me around 3-4 months, and was a constant learning process. The amp currently resides with my little brother, as it was a gift to him for his birthday! I primarily play bass, so while I love the amp, it is much better suited in his hands.</p><h2>Schematic</h2><ul><li><a href="/personal-website/blog/guitar-amp/amp_schematic_eagle.sch">Eagle CAD Schematic</a></li><li><a href="/personal-website/blog/guitar-amp/amp_schematic.pdf">Schematic PDF</a></li></ul><h2>Photo Gallery</h2><p>A chronological look at the amplifier coming together as well as schematic and layout pictures calling out some of the mods I added. Click each image for a larger view.</p></div>
+	<div class="post"><h2>Inspiration</h2><p>This amplifier was a long-time-coming project that stems from an internship I did at Fender. Most of the engineers I worked with were into building/modifying/salvaging vacuum tube guitar amplifiers. Hearing them talk about their projects convinced me that I must build my own at some point. A number of years later, armed with more money and spare time than I had in college, I finally went for it.</p><p>The amplifier circuit itself is a heavily modified version of the <a href="http://ampwares.com/schematics/deluxe_5e3.pdf" target="_blank">Fender 5E3 circuit</a>. I wanted to keep it relatively simple for my first build, and this circuit lended itself wonderfully to mods. Also, I stumbled upon <a href="https://robrobinette.com/How_The_5E3_Deluxe_Works.htm" target="_blank">this website</a>, which is a fantastic resource for general tube amplifier knowledge, assembly guides, and layout considerations. A lot of the mods I ended up adding to the circuit, as well as my general layout for the amplifier was inspired by some of the amp builds the website creator Rob Robinette did.</p><h2>Amplifier Circuit</h2><p>I modded the 5E3 circuit in the hopes of making this an extremely versatile amplifier. I wanted to see how many different tonal options I could pack into the amp without making things ridiculous (you can be the judge if I crossed the line a bit). The first modification I made was reducing the number of guitar inputs from four to one in order to free up one half of a pre-amp tube to be an optional extra gain stage. The extra gain stage allows you to crank this amp into the super fuzzy, Marshall amplifier zone. The second modification I made was a “master volume” knob right before the phase-inverter in order to get distorted, over-driven tones without going deaf or getting evicted from my apartment complex.</p><p>In the tone section, I added a “bright” switch which cuts lower frequencies a bit in order to give a tiny bit more control over sound. I also added a feedback switch that optionally feeds back a portion of the amplifier output signal to the cathode of the gain stage feeding the phase-inverter. This is a single-pole triple-throw switch that lets you either connect signal feedback, a cathode capacitor, or nothing to the cathode of the gain stage. Adding feedback through the form of direct feedback or indirect feedback via the capacitor lowers the overall gain of the amplifier, giving you more headroom for clean tones.  Doing the opposite gives you more gain, causing the amp to break up earlier and produce grittier, overdriven tones.</p><p>The final mod I installed was a bias selector switch, which allows you to switch between a “self-biasing” configuration of the power amplifier tubes, and a “fixed-bias” configuration. Fixed-bias manually sets the bias current flowing through the power tubes in the output stage, and generally provides more headroom for clean tones. Self-bias allows the bias current to fluctuate based on the operating conditions and input signal to the output stage, and leads to less headroom but a cool sounding compression affect.</p><p>Lastly, there were a couple of miscellaneous features I added into the amplifier for ease of use. First, the power transformer I used in the amplifier supports up to ~100W despite the current configuration of the amplifier using only ~30W. For an instant power/loudness upgrade, the rectifier tube can be swapped for a higher voltage level GZ34, and the power tubes can be changed for 6V6 tubes to 6L6 tubes. Second, the output transformer I used had multiple impedance output taps for different speaker types. I installed a rotary switch to change impedance in order to facilitate lots of different possible cabinets. Finally, I added a 4 ohm 100W resistor to the shorting connection of the speaker jack as a safety precaution. Bad things can happen when an output transformer, which is expecting a low (~4 ohm) speaker impedance, tries to drive very high current into a high impedance node. The way I have it setup, when there isn’t a 1/4” connector plugged into the output jack the jack shorts the output signal through a 4 ohm resistor to ground. Even if the amplifier is turned on without the speaker cabinet connected, all will be well.</p><h2>Amplifier Head Enclosure and Speaker Cabinet</h2><p>I decided to do both the amplifier head, and the speaker cabinet out of cherry wood for a steampunk-esque design. I started with a 10’ board of rough cut cherry lumber, and turned it into squared boards of the dimensions I was looking for. Both the speaker cabinet, and the amplifier head use boxes made with finger-joined cherry boards. The speaker itself is mounted on cabinet grade plywood that is attached to rails of pine. The back of the speaker cabinet is also closed off with cabinet plywood. 2/3 of the back panel is detachable so that the cabinet can be either open-backed, or sealed. The speaker cover is actually made for a car sub-woofer, but I really liked the contrast it provides with the wood aesthetic.</p><p>Due to the thickness of the wood, all the knobs, switches, and various other hardware are mounted in hollowed out sections of the front and back cherry boards. The same cabinet plywood used in the speaker cabinet is used on the top and bottom of the amplifier head to seal off the internals. Tubes, transformers, and the circuit board itself are mounted directly into this top plywood panel. An annoying surprise for me was that I had to manually ground all the switch/potentiometer casing metal as I was using an insulative wood instead of conductive metal chassis. This is done both for noise reduction and safety. The bottom panel can be removed for amplifier debug and bias measurements.</p><h2>Final Product</h2><p>All and all, the amplifier sounds great! All the different features I added worked without a hitch, and I only had to fiddle around a little with ground lines to get hum to a manageable level. Even at 30W, this amplifier is LOUD. I generally have the master volume knob around a 2 when I’m playing indoors. One minor complaint is that the master volume knob is pretty touchy. It seems to get loud extremely quickly, so it’s a little hard to find that sweet spot without trial and error. That being said, tube distortion tones sound amazing on this amplifier. My favorite configuration is self-bias turned on, feedback turned on, and turning the normal volume knob just until loud strums have some grit to them.</p><p>Another thing I discovered is that with the back panel fully closed, the cherry speaker cabinet has a pretty sharp resonance spike at the lowest A on a standard guitar. You can feel the entire cabinet vibrate when you hold an A. This is somewhat expected as normal speaker cabinets are made with an acoustically “dead” material such as MDF, and filled with sound reflection deadening fluff on the inside. These measures prevent exactly what is described above. However, putting my speaker cabinet in the open-back configuration removes this resonance, and overall sounds better. I might experiment with putting some deadening material inside the cabinet in the future, but for now I’m perfectly happy with it.</p><p>This project took me around 3-4 months, and was a constant learning process. The amp currently resides with my little brother, as it was a gift to him for his birthday! I primarily play bass, so while I love the amp, it is much better suited in his hands.</p><h2>Schematic</h2><ul><li><a href="/blog/guitar-amp/amp_schematic_eagle.sch">Eagle CAD Schematic</a></li><li><a href="/blog/guitar-amp/amp_schematic.pdf">Schematic PDF</a></li></ul><h2>Photo Gallery</h2><p>A chronological look at the amplifier coming together as well as schematic and layout pictures calling out some of the mods I added. Click each image for a larger view.</p></div>
 	<div id="photo-gallery">
 		
 	<style>
@@ -78,114 +78,114 @@
 		}
 	</style>
 	<div class="image-grid">
-		<a href="/personal-website/blog/guitar-amp/amp_ip1.jpg" target="_blank">
-			<img src="/personal-website/blog/guitar-amp/amp_ip1.jpg" alt="Amp in progress: 1">
+		<a href="/blog/guitar-amp/amp_ip1.jpg" target="_blank">
+			<img src="/blog/guitar-amp/amp_ip1.jpg" alt="Amp in progress: 1">
 		</a>
-		<a href="/personal-website/blog/guitar-amp/amp_ip2.jpg" target="_blank">
-			<img src="/personal-website/blog/guitar-amp/amp_ip2.jpg" alt="Amp in progress: 2">
+		<a href="/blog/guitar-amp/amp_ip2.jpg" target="_blank">
+			<img src="/blog/guitar-amp/amp_ip2.jpg" alt="Amp in progress: 2">
 		</a>
-		<a href="/personal-website/blog/guitar-amp/amp_ip3.jpg" target="_blank">
-			<img src="/personal-website/blog/guitar-amp/amp_ip3.jpg" alt="Amp in progress: 3">
+		<a href="/blog/guitar-amp/amp_ip3.jpg" target="_blank">
+			<img src="/blog/guitar-amp/amp_ip3.jpg" alt="Amp in progress: 3">
 		</a>
-		<a href="/personal-website/blog/guitar-amp/amp_ip4.jpg" target="_blank">
-			<img src="/personal-website/blog/guitar-amp/amp_ip4.jpg" alt="Amp in progress: 4">
+		<a href="/blog/guitar-amp/amp_ip4.jpg" target="_blank">
+			<img src="/blog/guitar-amp/amp_ip4.jpg" alt="Amp in progress: 4">
 		</a>
-		<a href="/personal-website/blog/guitar-amp/amp_ip5.jpg" target="_blank">
-			<img src="/personal-website/blog/guitar-amp/amp_ip5.jpg" alt="Amp in progress: 5">
+		<a href="/blog/guitar-amp/amp_ip5.jpg" target="_blank">
+			<img src="/blog/guitar-amp/amp_ip5.jpg" alt="Amp in progress: 5">
 		</a>
-		<a href="/personal-website/blog/guitar-amp/amp_ip6.jpg" target="_blank">
-			<img src="/personal-website/blog/guitar-amp/amp_ip6.jpg" alt="Amp in progress: 6">
+		<a href="/blog/guitar-amp/amp_ip6.jpg" target="_blank">
+			<img src="/blog/guitar-amp/amp_ip6.jpg" alt="Amp in progress: 6">
 		</a>
-		<a href="/personal-website/blog/guitar-amp/amp_ip7.jpg" target="_blank">
-			<img src="/personal-website/blog/guitar-amp/amp_ip7.jpg" alt="Amp in progress: 7">
+		<a href="/blog/guitar-amp/amp_ip7.jpg" target="_blank">
+			<img src="/blog/guitar-amp/amp_ip7.jpg" alt="Amp in progress: 7">
 		</a>
-		<a href="/personal-website/blog/guitar-amp/amp_ip8.jpg" target="_blank">
-			<img src="/personal-website/blog/guitar-amp/amp_ip8.jpg" alt="Amp in progress: 8">
+		<a href="/blog/guitar-amp/amp_ip8.jpg" target="_blank">
+			<img src="/blog/guitar-amp/amp_ip8.jpg" alt="Amp in progress: 8">
 		</a>
-		<a href="/personal-website/blog/guitar-amp/amp_ip9.jpg" target="_blank">
-			<img src="/personal-website/blog/guitar-amp/amp_ip9.jpg" alt="Amp in progress: 9">
+		<a href="/blog/guitar-amp/amp_ip9.jpg" target="_blank">
+			<img src="/blog/guitar-amp/amp_ip9.jpg" alt="Amp in progress: 9">
 		</a>
-		<a href="/personal-website/blog/guitar-amp/amp_cab1.jpg" target="_blank">
-			<img src="/personal-website/blog/guitar-amp/amp_cab1.jpg" alt="Amp cabinet: 1">
+		<a href="/blog/guitar-amp/amp_cab1.jpg" target="_blank">
+			<img src="/blog/guitar-amp/amp_cab1.jpg" alt="Amp cabinet: 1">
 		</a>
-		<a href="/personal-website/blog/guitar-amp/amp_cab2.jpg" target="_blank">
-			<img src="/personal-website/blog/guitar-amp/amp_cab2.jpg" alt="Amp cabinet: 2">
+		<a href="/blog/guitar-amp/amp_cab2.jpg" target="_blank">
+			<img src="/blog/guitar-amp/amp_cab2.jpg" alt="Amp cabinet: 2">
 		</a>
-		<a href="/personal-website/blog/guitar-amp/amp_cab3.jpg" target="_blank">
-			<img src="/personal-website/blog/guitar-amp/amp_cab3.jpg" alt="Amp cabinet: 3">
+		<a href="/blog/guitar-amp/amp_cab3.jpg" target="_blank">
+			<img src="/blog/guitar-amp/amp_cab3.jpg" alt="Amp cabinet: 3">
 		</a>
-		<a href="/personal-website/blog/guitar-amp/amp_cab4.jpg" target="_blank">
-			<img src="/personal-website/blog/guitar-amp/amp_cab4.jpg" alt="Amp cabinet: 4">
+		<a href="/blog/guitar-amp/amp_cab4.jpg" target="_blank">
+			<img src="/blog/guitar-amp/amp_cab4.jpg" alt="Amp cabinet: 4">
 		</a>
-		<a href="/personal-website/blog/guitar-amp/amp_cab5.jpg" target="_blank">
-			<img src="/personal-website/blog/guitar-amp/amp_cab5.jpg" alt="Amp cabinet: 5">
+		<a href="/blog/guitar-amp/amp_cab5.jpg" target="_blank">
+			<img src="/blog/guitar-amp/amp_cab5.jpg" alt="Amp cabinet: 5">
 		</a>
-		<a href="/personal-website/blog/guitar-amp/amp_cab6.jpg" target="_blank">
-			<img src="/personal-website/blog/guitar-amp/amp_cab6.jpg" alt="Amp cabinet: 6">
+		<a href="/blog/guitar-amp/amp_cab6.jpg" target="_blank">
+			<img src="/blog/guitar-amp/amp_cab6.jpg" alt="Amp cabinet: 6">
 		</a>
-		<a href="/personal-website/blog/guitar-amp/amp_cab7.jpg" target="_blank">
-			<img src="/personal-website/blog/guitar-amp/amp_cab7.jpg" alt="Amp cabinet: 7">
+		<a href="/blog/guitar-amp/amp_cab7.jpg" target="_blank">
+			<img src="/blog/guitar-amp/amp_cab7.jpg" alt="Amp cabinet: 7">
 		</a>
-		<a href="/personal-website/blog/guitar-amp/amp_cab8.jpg" target="_blank">
-			<img src="/personal-website/blog/guitar-amp/amp_cab8.jpg" alt="Amp cabinet: 8">
+		<a href="/blog/guitar-amp/amp_cab8.jpg" target="_blank">
+			<img src="/blog/guitar-amp/amp_cab8.jpg" alt="Amp cabinet: 8">
 		</a>
-		<a href="/personal-website/blog/guitar-amp/amp_cab9.jpg" target="_blank">
-			<img src="/personal-website/blog/guitar-amp/amp_cab9.jpg" alt="Amp cabinet: 9">
+		<a href="/blog/guitar-amp/amp_cab9.jpg" target="_blank">
+			<img src="/blog/guitar-amp/amp_cab9.jpg" alt="Amp cabinet: 9">
 		</a>
-		<a href="/personal-website/blog/guitar-amp/amp1.jpg" target="_blank">
-			<img src="/personal-website/blog/guitar-amp/amp1.jpg" alt="Amp: 1">
+		<a href="/blog/guitar-amp/amp1.jpg" target="_blank">
+			<img src="/blog/guitar-amp/amp1.jpg" alt="Amp: 1">
 		</a>
-		<a href="/personal-website/blog/guitar-amp/amp2.jpg" target="_blank">
-			<img src="/personal-website/blog/guitar-amp/amp2.jpg" alt="Amp: 2">
+		<a href="/blog/guitar-amp/amp2.jpg" target="_blank">
+			<img src="/blog/guitar-amp/amp2.jpg" alt="Amp: 2">
 		</a>
-		<a href="/personal-website/blog/guitar-amp/amp3.jpg" target="_blank">
-			<img src="/personal-website/blog/guitar-amp/amp3.jpg" alt="Amp: 3">
+		<a href="/blog/guitar-amp/amp3.jpg" target="_blank">
+			<img src="/blog/guitar-amp/amp3.jpg" alt="Amp: 3">
 		</a>
-		<a href="/personal-website/blog/guitar-amp/amp4.jpg" target="_blank">
-			<img src="/personal-website/blog/guitar-amp/amp4.jpg" alt="Amp: 4">
+		<a href="/blog/guitar-amp/amp4.jpg" target="_blank">
+			<img src="/blog/guitar-amp/amp4.jpg" alt="Amp: 4">
 		</a>
-		<a href="/personal-website/blog/guitar-amp/amp5.jpg" target="_blank">
-			<img src="/personal-website/blog/guitar-amp/amp5.jpg" alt="Amp: 5">
+		<a href="/blog/guitar-amp/amp5.jpg" target="_blank">
+			<img src="/blog/guitar-amp/amp5.jpg" alt="Amp: 5">
 		</a>
-		<a href="/personal-website/blog/guitar-amp/amp6.jpg" target="_blank">
-			<img src="/personal-website/blog/guitar-amp/amp6.jpg" alt="Amp: 6">
+		<a href="/blog/guitar-amp/amp6.jpg" target="_blank">
+			<img src="/blog/guitar-amp/amp6.jpg" alt="Amp: 6">
 		</a>
-		<a href="/personal-website/blog/guitar-amp/amp7.jpg" target="_blank">
-			<img src="/personal-website/blog/guitar-amp/amp7.jpg" alt="Amp: 7">
+		<a href="/blog/guitar-amp/amp7.jpg" target="_blank">
+			<img src="/blog/guitar-amp/amp7.jpg" alt="Amp: 7">
 		</a>
-		<a href="/personal-website/blog/guitar-amp/amp8.jpg" target="_blank">
-			<img src="/personal-website/blog/guitar-amp/amp8.jpg" alt="Amp: 8">
+		<a href="/blog/guitar-amp/amp8.jpg" target="_blank">
+			<img src="/blog/guitar-amp/amp8.jpg" alt="Amp: 8">
 		</a>
-		<a href="/personal-website/blog/guitar-amp/amp9.jpg" target="_blank">
-			<img src="/personal-website/blog/guitar-amp/amp9.jpg" alt="Amp: 9">
+		<a href="/blog/guitar-amp/amp9.jpg" target="_blank">
+			<img src="/blog/guitar-amp/amp9.jpg" alt="Amp: 9">
 		</a>
-		<a href="/personal-website/blog/guitar-amp/amp10.jpg" target="_blank">
-			<img src="/personal-website/blog/guitar-amp/amp10.jpg" alt="Amp: 10">
+		<a href="/blog/guitar-amp/amp10.jpg" target="_blank">
+			<img src="/blog/guitar-amp/amp10.jpg" alt="Amp: 10">
 		</a>
-		<a href="/personal-website/blog/guitar-amp/amp11.jpg" target="_blank">
-			<img src="/personal-website/blog/guitar-amp/amp11.jpg" alt="Amp: 11">
+		<a href="/blog/guitar-amp/amp11.jpg" target="_blank">
+			<img src="/blog/guitar-amp/amp11.jpg" alt="Amp: 11">
 		</a>
-		<a href="/personal-website/blog/guitar-amp/amp12.jpg" target="_blank">
-			<img src="/personal-website/blog/guitar-amp/amp12.jpg" alt="Amp: 12">
+		<a href="/blog/guitar-amp/amp12.jpg" target="_blank">
+			<img src="/blog/guitar-amp/amp12.jpg" alt="Amp: 12">
 		</a>
-		<a href="/personal-website/blog/guitar-amp/amp_schematic_image.png" target="_blank">
-			<img src="/personal-website/blog/guitar-amp/amp_schematic_image.png" alt="Amp schematic">
+		<a href="/blog/guitar-amp/amp_schematic_image.png" target="_blank">
+			<img src="/blog/guitar-amp/amp_schematic_image.png" alt="Amp schematic">
 		</a>
-		<a href="/personal-website/blog/guitar-amp/amp_layout.png" target="_blank">
-			<img src="/personal-website/blog/guitar-amp/amp_layout.png" alt="Amp layout">
+		<a href="/blog/guitar-amp/amp_layout.png" target="_blank">
+			<img src="/blog/guitar-amp/amp_layout.png" alt="Amp layout">
 		</a>
 	</div>
 
 	</div>
 	<div id="prev-next">
 		<div>
-			<a href="/personal-website/blog/cutting-board/">
+			<a href="/blog/cutting-board/">
 				←
 				<span>Cutting Board and Knife Sheaths</span>
 			</a>
 		</div>
 		<div>
-			<a href="/personal-website/blog/corkthulu/">
+			<a href="/blog/corkthulu/">
 				<span>Corkthulu</span>
 				→
 			</a>
